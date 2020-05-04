@@ -21,10 +21,10 @@ class Solution:
             if len(path)==len(digits):
                 res.append(path)
                 return
-            for j in dic[digits[index]]:
+            for j in dic[digits[index]]: #Lookup . ex : digits[0]=2 . dic[2]='abc' , add a,b,c to path 
                 dfs(dic,res,digits,path+j,index+1)
                 
-                
+        #calling the function       
         dfs(dic,res,digits,'',0)
         return res
         
