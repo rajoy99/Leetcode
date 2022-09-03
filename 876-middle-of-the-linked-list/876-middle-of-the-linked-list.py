@@ -6,21 +6,10 @@
 class Solution:
     def middleNode(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
+        tmp=head
         
-        count=0
-        
-        pointer=head
-        
-        while head:
-            
-            count+=1
+        while tmp and tmp.next:
             head=head.next
+            tmp=tmp.next.next
             
-        count=math.floor(count/2)
-        i=0
-        while i<count:
-            pointer=pointer.next
-            i+=1
-            
-        
-        return pointer
+        return head
