@@ -7,13 +7,13 @@
 class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         
-        hmap={} # node : position 
+        hset=set()
         i=0
         while head:
-            if head in hmap:
-                return hmap[head]
+            if head in hset:
+                return head
             else:
-                hmap[head]=head
+                hset.add(head)
                 head=head.next
             i+=1
             
