@@ -4,10 +4,9 @@ class Solution:
         
         numset=set(nums)
         
-        rng=range(1,len(nums)+1)
         res=[]
         
-        for i in rng:
+        for i in range(1,len(nums)+1):
             if i not in numset:
                 res.append(i)
         return res
